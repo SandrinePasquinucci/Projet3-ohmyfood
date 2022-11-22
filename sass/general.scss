@@ -1,0 +1,36 @@
+/* Feuille de style de l'ensemble du projet */
+body {
+    /* Police et couleur d'écriture, couleur de fond, suppression ndes marges auto, cadrage */
+    font-family: $roboto;
+    color: #000000;
+    font-size: 14px;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 0;
+    font-weight: 700;
+    max-width: 1400px;
+  }
+  .h2{
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+ /* Supprimer les marges auto */
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+/* suppression des puces */
+li {
+  list-style-type: none;
+}
+
+.coeurrose i{
+  color: $violet-primaire;
+
+}
