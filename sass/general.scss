@@ -12,7 +12,7 @@ body {
   }
   .h2{
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 600;
   }
 
  /* Supprimer les marges auto */
@@ -31,6 +31,29 @@ li {
 }
 
 .coeurrose i{
-  color: $violet-primaire;
+  
+  color:$violet-primaire;
+
+
+}
+
+.description h2{
+  font-family: $shrikhand;
+  text-align: center;
+
+  font-size:30px; 
+
+}
+.bouton {
+  color: $txt-blanc;
+  background: linear-gradient($rose-secondaire, $violet-primaire);
+  border: none;
+  border-radius: 30px;
+  height: 60px;
+  width: 260px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  cursor: pointer;
 
 }

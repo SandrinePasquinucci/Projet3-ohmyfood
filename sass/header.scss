@@ -1,11 +1,19 @@
 header{
+    .retouraccueil{
+        display:flex;
+
+        align-items: center;
+        text-decoration: none;
+     }
     .header__entete{
         font-family: $shrikhand;
         text-align: center;
         margin-bottom: -1px; 
-        font-size:38px; 
+        font-size:30px; 
         margin-top: 10px;
     }
-
+    .retouraccueil i{
+      margin : 25px;
+     }
 
 }
