@@ -10,6 +10,8 @@ body {
   padding: 0;
   font-weight: 700;
   max-width: 1400px;
+  width: 100%;
+  height: 100%;
 }
 
 .h2 {
@@ -250,12 +252,10 @@ header .retouraccueil i {
   margin-top: 10px;
 }
 .restaurants .coeurrose {
-  position: absolute;
   top: 5px;
   right: 30px;
 }
 .restaurants .coeurblanc {
-  position: absolute;
   top: 5px;
   right: 10px;
 }
@@ -302,6 +302,15 @@ header .retouraccueil i {
   width: 100%;
   top: 70px;
 }
+@media (min-width: 992px) {
+  .description__titre {
+    width: 800px;
+    margin: auto;
+  }
+  .description__image img {
+    width: 350px;
+  }
+}
 
 .menu {
   background-color: #e2e2e2;
@@ -316,6 +325,7 @@ header .retouraccueil i {
   background-color: #ffffff;
   margin: 15px 0px;
   padding: 10px;
+  /* Desktop*/
 }
 .menu__detail {
   display: flex;
@@ -326,6 +336,12 @@ header .retouraccueil i {
   font-weight: 300;
 }
 
+@media (min-width: 992px) {
+  .menu {
+    width: 800px;
+    margin: auto;
+  }
+}
 .commander {
   display: flex;
   flex-direction: column;

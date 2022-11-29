@@ -19,7 +19,17 @@
    width: 100%;
        top : 70px;
     }
-     
+    @media (min-width: 992px) {
+        &__titre {
+            width: 800px;
+            margin: auto;
+        }
+        &__image img{
+
+            width: 350px;
+            
+             }
+        }     
 
 }
 
@@ -36,7 +46,11 @@
         background-color: #ffffff;
         margin:15px 0px;
         padding: 10px;
-    }
+          /* Desktop*/
+  
+  }
+
+
     &__detail{
         display:flex;
         justify-content: space-between;
@@ -51,6 +65,12 @@
 
 
 }
+@media (min-width: 992px) {
+    .menu {
+        width: 800px;
+        margin: auto;
+    }
+    }
 .commander{
     display : flex;
 flex-direction: column;
