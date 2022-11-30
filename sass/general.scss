@@ -42,7 +42,6 @@ li {
 .description h2{
   font-family: $shrikhand;
   text-align: center;
-
   font-size:30px; 
 
 }
@@ -57,5 +56,11 @@ li {
   font-weight: 500;
   margin-bottom: 50px;
   cursor: pointer;
-
+box-shadow: 1px 1px  5px $gris-sombre ;
+transition: background  1s;
+transition: box-shadow 1s;
+}
+.bouton:hover {
+  background:$rose-secondaire ;
+  box-shadow: 1px 1px  15px $gris-sombre ;
 }

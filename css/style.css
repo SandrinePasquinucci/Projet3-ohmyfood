@@ -56,6 +56,14 @@ li {
   font-weight: 500;
   margin-bottom: 50px;
   cursor: pointer;
+  box-shadow: 1px 1px 5px #353535;
+  transition: background 1s;
+  transition: box-shadow 1s;
+}
+
+.bouton:hover {
+  background: #FF79DA;
+  box-shadow: 1px 1px 15px #353535;
 }
 
 header .retouraccueil {
@@ -72,6 +80,11 @@ header .header__entete {
 }
 header .retouraccueil i {
   margin: 25px;
+}
+
+.retouraccueil h1 {
+  display: block;
+  margin: auto;
 }
 
 /* Section : localisation , selection de la ville de recherche*/
@@ -170,9 +183,8 @@ header .retouraccueil i {
   display: flex;
   flex-direction: row;
   position: relative;
-  box-shadow: 1px 1px 1px 1px #f2f2f2;
   border-radius: 25px;
-  background-color: #e2e2e2;
+  box-shadow: 1px 1px 15px #e2e2e2;
   align-items: center;
   height: 80px;
   margin: 15px 0px 15px 15px;
@@ -216,6 +228,7 @@ header .retouraccueil i {
 .restaurants__liste__card {
   margin-bottom: 30px;
   background-color: #ffffff;
+  box-shadow: 1px 1px 5px #353535;
   border-radius: 20px;
 }
 .restaurants__liste__cardimage {
@@ -260,16 +273,16 @@ header .retouraccueil i {
   right: 10px;
 }
 .restaurants .coeurrose {
-  visibility: visible;
-}
-.restaurants .coeurrose :hover {
-  visibility: visible;
+  visibility: hidden;
 }
 .restaurants .coeurblanc {
   visibility: visible;
 }
-.restaurants .coeurblanc :hover {
+.restaurants .coeurblanc:hover {
   visibility: hidden;
+}
+.restaurants .coeurblanc:hover .coeurrose {
+  visibility: visible;
 }
 @media (min-width: 768px) {
   .restaurants__liste {
@@ -288,6 +301,7 @@ header .retouraccueil i {
 .description {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .description__titre {
   display: flex;
@@ -297,6 +311,9 @@ header .retouraccueil i {
   background-color: #e2e2e2;
   padding-top: 40px;
   margin-top: -48px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
 }
 .description__image img {
   width: 100%;
@@ -320,7 +337,7 @@ header .retouraccueil i {
   padding-bottom: 10px;
 }
 .menu__titre {
-  box-shadow: 1px 1px 1px 1px #f2f2f2;
+  box-shadow: 1px 1px 5px #353535;
   border-radius: 15px;
   background-color: #ffffff;
   margin: 15px 0px;
@@ -350,6 +367,14 @@ header .retouraccueil i {
   background-color: #e2e2e2;
 }
 
+@media (min-width: 992px) {
+  .commander {
+    width: 800px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .footermenu {
   display: flex;
   flex-direction: column;
@@ -385,6 +410,15 @@ footer a {
 
 .iconefooter {
   width: 30px;
+}
+
+@media (min-width: 992px) {
+  .footermenu {
+    width: 800px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

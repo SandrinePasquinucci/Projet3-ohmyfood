@@ -37,3 +37,11 @@ footer ul {
   .iconefooter{
     width: 30px;
   }
+  @media (min-width: 992px) {
+    .footermenu{
+        width: 800px;
+        margin: auto;
+        padding-left: 10px;
+    padding-right: 10px;
+    }
+    }
