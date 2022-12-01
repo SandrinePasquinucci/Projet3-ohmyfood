@@ -99,15 +99,17 @@ flex-direction: column;
 
     @keyframes menuvisible {
         from {
+            transform : translatey(10px);
             opacity:0;
         }
         to {
+            transform : translatey(0px);
             opacity:1;
         }  
     }
     
-
     .menu__titre:nth-child(1){
+        transition : 0.5s;
         animation: menuvisible 1s ;
     }
     .menu__titre:nth-child(2){
