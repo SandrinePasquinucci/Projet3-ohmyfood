@@ -56,10 +56,15 @@ li {
   margin-bottom: 50px;
   cursor: pointer;
 box-shadow: 1px 1px  5px $gris-sombre ;
-transition: background  1s;
+transition: opacity 1s;
 transition: box-shadow 1s;
 }
 .bouton:hover {
-  background:$rose-secondaire ;
+  opacity : 0.8 ;
   box-shadow: 1px 1px  15px $gris-sombre ;
+}
+
+.menu__focus i {
+  color :#fff;
+  
 }

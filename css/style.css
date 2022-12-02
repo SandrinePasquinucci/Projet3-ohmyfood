@@ -55,13 +55,17 @@ li {
   margin-bottom: 50px;
   cursor: pointer;
   box-shadow: 1px 1px 5px #353535;
-  transition: background 1s;
+  transition: opacity 1s;
   transition: box-shadow 1s;
 }
 
 .bouton:hover {
-  background: #FF79DA;
+  opacity: 0.8;
   box-shadow: 1px 1px 15px #353535;
+}
+
+.menu__focus i {
+  color: #fff;
 }
 
 .loaderpage {
@@ -376,18 +380,38 @@ header .retouraccueil i {
   padding-top: 30px;
   padding-bottom: 10px;
 }
-.menu__titre {
+.menu__plat {
+  display: flex;
   box-shadow: 1px 1px 5px #353535;
   border-radius: 15px;
   background-color: #ffffff;
   margin: 15px 0px;
-  padding: 10px;
-  /* Desktop*/
+  padding-left: 10px;
+}
+.menu__focus {
+  width: 0%;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+}
+.menu__plat:hover > .menu__focus {
+  width: 20%;
+  visibility: visible;
+}
+.menu__titre {
+  width: 100%;
 }
 .menu__detail {
   display: flex;
   justify-content: space-between;
   padding-top: 5px;
+}
+.menu__detail h3 {
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 .menu h2, .menu p {
   font-weight: 300;
@@ -405,6 +429,14 @@ header .retouraccueil i {
     margin: auto;
   }
 }
+.titre_plat {
+  padding-top: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 250px;
+}
+
 .commander {
   display: flex;
   flex-direction: column;
@@ -472,7 +504,7 @@ header .retouraccueil i {
   animation: menuvisible 10s;
 }
 
-.footermenu {
+.footermenu, .footermenurestaurant {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
@@ -481,7 +513,7 @@ header .retouraccueil i {
   color: #ffffff;
 }
 
-.footermenu p {
+.footermenu p, footermenurestaurant p {
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
   margin-top: 20px;
@@ -510,7 +542,7 @@ footer a {
 }
 
 @media (min-width: 992px) {
-  .footermenu {
+  .footermenurestaurant {
     width: 800px;
     margin: auto;
     padding-left: 10px;
