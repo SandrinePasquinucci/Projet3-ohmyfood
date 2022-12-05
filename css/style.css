@@ -238,8 +238,14 @@ header .retouraccueil i {
   font-size: 17px;
   gap: 23px;
 }
+.fonctionnement .fonctionnement__icones i {
+  color: #888888;
+}
 .fonctionnement__menu__detailtexte:hover {
   background-color: #e4ccfa;
+}
+.fonctionnement__menu__detailtexte:hover .fonctionnement__icones i {
+  color: #9356DC;
 }
 @media (min-width: 768px) {
   .fonctionnement__menu {
@@ -308,25 +314,38 @@ header .retouraccueil i {
   font-size: 16px;
   margin-top: 10px;
 }
-.restaurants .coeurrose {
+.restaurants .coeurrose i {
+  position: absolute;
   top: 5px;
-  right: 30px;
+  right: 10px;
+  opacity: 0;
 }
-.restaurants .coeurblanc {
+.restaurants .coeurblanc i {
+  position: absolute;
   top: 5px;
   right: 10px;
 }
-.restaurants .coeurrose {
-  visibility: hidden;
+.restaurants .coeur:hover .coeurblanc i {
+  animation: coeurblancchangement 3s linear 1;
 }
-.restaurants .coeurblanc {
-  visibility: visible;
+.restaurants .coeur:hover .coeurrose i {
+  animation: coeurrosechangement 3s linear 1;
 }
-.restaurants .coeurblanc:hover {
-  visibility: hidden;
+@keyframes coeurblancchangement {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
-.restaurants .coeurblanc:hover .coeurrose {
-  visibility: visible;
+@keyframes coeurrosechangement {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media (min-width: 768px) {
   .restaurants__liste {
@@ -355,8 +374,6 @@ header .retouraccueil i {
   background-color: #e2e2e2;
   padding-top: 40px;
   margin-top: -48px;
-  padding-left: 10px;
-  padding-right: 10px;
   width: 100%;
 }
 .description__image img {
@@ -367,6 +384,8 @@ header .retouraccueil i {
   .description__titre {
     width: 800px;
     margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .description__image img {
     width: 350px;
@@ -397,9 +416,30 @@ header .retouraccueil i {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
 }
-.menu__plat:hover > .menu__focus {
-  width: 20%;
-  visibility: visible;
+.menu__plat:hover .menu__focus {
+  animation: focusvisible 1s;
+  animation-fill-mode: forwards;
+}
+.menu__plat:hover .menu__focus i {
+  animation: focustourne 1s;
+}
+@keyframes focusvisible {
+  from {
+    width: 0;
+    visibility: hidden;
+  }
+  to {
+    width: 20%;
+    visibility: visible;
+  }
+}
+@keyframes focustourne {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .menu__titre {
   width: 100%;
@@ -513,7 +553,7 @@ header .retouraccueil i {
   color: #ffffff;
 }
 
-.footermenu p, footermenurestaurant p {
+.footermenu p, .footermenurestaurant p {
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
   margin-top: 20px;

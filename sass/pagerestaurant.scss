@@ -12,8 +12,7 @@
     background-color: $gris-clair;
     padding-top :40px;
     margin-top : -48px;
-    padding-left: 10px;
-    padding-right: 10px;
+
     width: 100%;
 
 }
@@ -27,6 +26,8 @@
         &__titre {
             width: 800px;
             margin: auto;
+            padding-left: 10px;
+            padding-right: 10px;
         }
         &__image img{
 
@@ -62,10 +63,33 @@
    background-color: $aqua-tertiaire;
    border-radius: 0 15px 15px 0;
    }
-   &__plat:hover > &__focus{
-   width: 20%;
-visibility: visible;
+   &__plat:hover {
+    .menu__focus{
+        animation: focusvisible 1s ;
+        animation-fill-mode:forwards;
+    }
+    .menu__focus i{
+        animation: focustourne 1s ;
+    }
  }
+ @keyframes focusvisible {
+    from {
+            width: 0;
+            visibility: hidden;
+    }
+    to {
+            width: 20%;
+            visibility: visible;
+    }  
+}
+@keyframes focustourne {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }  
+}
 
 &__titre{
     width: 100%;

@@ -123,11 +123,15 @@ width: 100%;
     font-size: 17px;
     gap: 23px;
   }
-
+  .fonctionnement__icones i{
+    color: #888888;
+  }
 
   &__menu__detailtexte:hover  {
     background-color: #e4ccfa;
- 
+    .fonctionnement__icones i{
+      color: $violet-primaire;
+    }
   }
   
 
@@ -204,34 +208,52 @@ width: 100%;
   font-size: 16px;
   margin-top: 10px;
 }
-.coeurrose {
-
+.coeurrose i{
+  position: absolute;
   top : 5px;
-  right:30px;
+  right:10px;
+  opacity : 0;
+
 }
-.coeurblanc {
- 
+.coeurblanc i{
+  position: absolute;
     top : 5px;
     right:10px;
+    
+   
   }
   
-.coeurrose{
-  visibility:hidden;
 
+
+.coeur:hover{
+
+  .coeurblanc i{animation: coeurblancchangement 3s linear 1;}
+  .coeurrose i{animation: coeurrosechangement 3s linear 1;}
+  }
+
+  @keyframes coeurblancchangement {
+    from {
+      
+        opacity : 1
+    }
+    to {
+      
+       opacity:0;
+
+    }
 }
-	
-.coeurblanc{
-  visibility:visible;
-}
-.coeurblanc:hover{
-  visibility:hidden;
-  .coeurrose{
-    visibility:visible;
-  
+
+@keyframes coeurrosechangement {
+  from {
+    
+      opacity : 0;
+  }
+  to {
+    
+     opacity:1;
+
   }
 }
-
-
   /* Tablette*/
   @media (min-width: 768px) {
     &__liste {
