@@ -4,7 +4,7 @@ body {
   /* Police et couleur d'écriture, couleur de fond, suppression ndes marges auto, cadrage */
   font-family: "Roboto", sans-serif;
   color: #000000;
-  font-size: 14px;
+  font-size: 22px;
   background-color: #ffffff;
   margin: auto;
   padding: 0;
@@ -119,8 +119,8 @@ header .header__entete {
   font-family: "Shrikhand", sans-serif;
   text-align: center;
   margin-bottom: -1px;
-  font-size: 30px;
-  margin-top: 10px;
+  font-size: 40px;
+  margin-top: 20px;
 }
 header .retouraccueil i {
   margin: 25px;
@@ -133,26 +133,29 @@ header .retouraccueil i {
 
 /* Section : localisation , selection de la ville de recherche*/
 .localisation {
-  background-color: #888888;
-  height: 50px;
+  background-color: rgb(219, 214, 214);
+  height: 70px;
   display: flex;
-  border-top: 3px solid #888888;
+  box-shadow: -1px -3px 1px 0px rgba(189, 187, 187, 0.75);
   align-items: center;
   justify-content: center;
   color: #000000;
+  margin-top: 10px;
 }
 .localisation__formaulaire i {
   width: 20px;
   height: 20px;
+  font-size: 0.6cm;
 }
 .localisation__texte, .localisation__texte::placeholder {
-  background-color: #888888;
+  background-color: rgb(219, 214, 214);
   font-size: 20px;
   border: none;
   opacity: 1;
   width: 140px;
   color: #000000;
   font-family: "Roboto";
+  font-weight: 700;
 }
 
 /* Section : presentation , description du site*/
@@ -160,22 +163,24 @@ header .retouraccueil i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 30px;
   text-align: center;
   background-color: #e2e2e2;
   /* Tablette*/
   /* Desktop*/
 }
 .presentation__titre {
-  width: 300px;
-  margin-bottom: -10px;
+  width: 350px;
+  font-weight: 900;
+  padding-top: 20px;
 }
 .presentation__texte {
-  width: 400px;
-  font-weight: 100;
-  font-size: 22px;
-  margin-bottom: 40px;
-  padding-top: 25px;
+  width: 500px;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  color: #888888;
 }
 @media (min-width: 768px) {
   .presentation .presentation__titre, .presentation .presentation__texte {
@@ -193,15 +198,17 @@ header .retouraccueil i {
 
 /* Section : Fonctionnement , menu de navigation*/
 .fonctionnement {
-  padding-top: 20px;
+  padding-top: 60px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 70px;
   /* Tablette*/
   /* Desktop*/
 }
 .fonctionnement__menu {
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
 }
 .fonctionnement__menu__detail {
   display: flex;
@@ -210,8 +217,8 @@ header .retouraccueil i {
 }
 .fonctionnement__menu__detailnumero {
   display: flex;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -230,16 +237,17 @@ header .retouraccueil i {
   border-radius: 25px;
   box-shadow: 1px 1px 15px #e2e2e2;
   align-items: center;
-  height: 80px;
+  height: 90px;
   margin: 15px 0px 15px 15px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
-  font-size: 17px;
+  font-size: 22px;
   gap: 23px;
 }
 .fonctionnement .fonctionnement__icones i {
   color: #888888;
+  font-size: 26px;
 }
 .fonctionnement__menu__detailtexte:hover {
   background-color: #e4ccfa;
@@ -263,7 +271,7 @@ header .retouraccueil i {
 
 /* Section : Restaurants , Descriptif des restaurants*/
 .restaurants {
-  padding-top: 20px;
+  padding-top: 60px;
   padding-left: 20px;
   padding-right: 20px;
   background-color: #e2e2e2;
@@ -310,8 +318,8 @@ header .retouraccueil i {
   color: #000000;
 }
 .restaurants__liste__carddetail p {
-  font-weight: 300;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 22px;
   margin-top: 10px;
 }
 .restaurants .coeurrose i {
@@ -408,7 +416,7 @@ header .retouraccueil i {
   padding-left: 10px;
 }
 .menu__focus {
-  width: 0%;
+  width: 0;
   visibility: hidden;
   display: flex;
   align-items: center;
@@ -429,7 +437,7 @@ header .retouraccueil i {
     visibility: hidden;
   }
   to {
-    width: 20%;
+    width: 60px;
     visibility: visible;
   }
 }
@@ -505,7 +513,7 @@ header .retouraccueil i {
 }
 .menu__titre:nth-child(1) {
   transition: 0.5s;
-  animation: menuvisible 1s;
+  animation: menuvisible 2s;
 }
 
 .menu__titre:nth-child(2) {
