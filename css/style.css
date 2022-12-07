@@ -33,8 +33,35 @@ li {
   list-style-type: none;
 }
 
-.coeurrose i {
-  color: #9356DC;
+.coeurrose, .coeurblanc {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+}
+
+.coeurrose {
+  color: transparent;
+  opacity: 0;
+  transition: all 1500ms ease;
+}
+
+.coeurblanc:hover {
+  color: transparent;
+  opacity: 0;
+}
+
+.coeurrose:hover {
+  opacity: 1;
+  background: linear-gradient(#9356DC, #FF79DA);
+  /* nécessaire sinon affiche un carré dégradé -- compatiblité des navigateurs */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coeurresto {
+  font-size: 30px;
 }
 
 .description h2 {
@@ -286,7 +313,7 @@ header .retouraccueil i {
 .restaurants__liste__card {
   margin-bottom: 30px;
   background-color: #ffffff;
-  box-shadow: 1px 1px 5px #353535;
+  box-shadow: 1px 1px 5px grey;
   border-radius: 20px;
 }
 .restaurants__liste__cardimage {
@@ -369,6 +396,7 @@ header .retouraccueil i {
     height: 200px;
   }
 }
+/*setion description : image + titre*/
 .description {
   display: flex;
   flex-direction: column;
@@ -376,13 +404,16 @@ header .retouraccueil i {
 }
 .description__titre {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-radius: 40px 40px 0px 0px;
   background-color: #e2e2e2;
   padding-top: 40px;
   margin-top: -48px;
-  width: 100%;
+  padding-left: 30px;
+  padding-right: 50px;
+  width: 90%;
+  font-weight: 500;
 }
 .description__image img {
   width: 100%;
@@ -396,24 +427,31 @@ header .retouraccueil i {
     padding-right: 10px;
   }
   .description__image img {
-    width: 350px;
+    width: 880px;
   }
+}
+
+/*setion menu : carte du restaurant*/
+.menu__detail p, .titre_plat {
+  width: 200px;
 }
 
 .menu {
   background-color: #e2e2e2;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 30px;
   padding-bottom: 10px;
 }
 .menu__plat {
   display: flex;
-  box-shadow: 1px 1px 5px #353535;
+  box-shadow: 1px 1px 5px grey;
   border-radius: 15px;
   background-color: #ffffff;
   margin: 15px 0px;
   padding-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu__focus {
   width: 0;
@@ -431,13 +469,19 @@ header .retouraccueil i {
 .menu__plat:hover .menu__focus i {
   animation: focustourne 1s;
 }
+.menu__plat:hover .menu__detail p, .menu__plat:hover .titre_plat {
+  width: 280px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 @keyframes focusvisible {
   from {
     width: 0;
     visibility: hidden;
   }
   to {
-    width: 60px;
+    width: 80px;
     visibility: visible;
   }
 }
@@ -457,12 +501,14 @@ header .retouraccueil i {
   justify-content: space-between;
   padding-top: 5px;
 }
+.menu__detail p {
+  font-weight: 400;
+  font-size: 18px;
+}
 .menu__detail h3 {
   padding-right: 10px;
   padding-bottom: 10px;
-}
-.menu h2, .menu p {
-  font-weight: 300;
+  font-size: 20px;
 }
 .menu__barre {
   background-color: #99E2D0;
@@ -470,18 +516,15 @@ header .retouraccueil i {
   width: 55px;
   margin-top: 5px;
 }
-
-@media (min-width: 992px) {
-  .menu {
-    width: 800px;
-    margin: auto;
-  }
+.menu h2 {
+  padding-top: 50px;
+  font-size: 22px;
+  font-weight: 300;
+  color: #353535;
 }
-.titre_plat {
+.menu .titre_plat {
   padding-top: 10px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  font-size: 20px;
   width: 250px;
 }
 
@@ -500,56 +543,92 @@ header .retouraccueil i {
     padding-left: 10px;
     padding-right: 10px;
   }
+  .titre_plat {
+    width: 350px;
+  }
+  .menu {
+    width: 800px;
+    margin: auto;
+  }
 }
 @keyframes menuvisible {
   from {
-    transform: translatey(10px);
+    transform: translateY(200px);
     opacity: 0;
   }
   to {
-    transform: translatey(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
-.menu__titre:nth-child(1) {
-  transition: 0.5s;
-  animation: menuvisible 2s;
+@-webkit-keyframes menuvisible {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.menu__plat:nth-child(1) {
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 0.5s;
+  animation: menuvisible 0.5s linear forwards 0.5s;
 }
 
-.menu__titre:nth-child(2) {
-  animation: menuvisible 2s;
+.menu__plat:nth-child(2) {
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 1s;
+  animation: menuvisible 0.5s linear forwards 1s;
 }
 
-.menu__titre:nth-child(3) {
-  animation: menuvisible 3s;
+.menu__plat:nth-child(3) {
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 1.5s;
+  animation: menuvisible 0.5s linear forwards 1.5s;
 }
 
-.menu__titre:nth-child(4) {
-  animation: menuvisible 4s;
+.menu__plat:nth-child(4) {
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 2s;
+  animation: menuvisible 0.5s linear forwards 2s;
 }
 
-.menu__titre:nth-child(5) {
-  animation: menuvisible 5s;
+.menu__plat:nth-child(5) {
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 2.5s;
+  animation: menuvisible 0.5s linear forwards 2.5s;
 }
 
-.menu__titre:nth-child(6) {
-  animation: menuvisible 6s;
+.menu__plat:nth-child(6) {
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 3s;
+  animation: menuvisible 0.5s linear forwards 3s;
 }
 
-.menu__titre:nth-child(7) {
-  animation: menuvisible 7s;
+.menu__plat:nth-child(7) {
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 3.5s;
+  animation: menuvisible 0.5s linear forwards 3.5s;
 }
 
-.menu__titre:nth-child(8) {
-  animation: menuvisible 8s;
+.menu__plat:nth-child(8) {
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 4s;
+  animation: menuvisible 0.5s linear forwards 4s;
 }
 
-.menu__titre:nth-child(9) {
-  animation: menuvisible 9s;
+.menu__plat:nth-child(9) {
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 4.5s;
+  animation: menuvisible 0.5s linear forwards 4.5s;
 }
 
-.menu__titre:nth-child(10) {
-  animation: menuvisible 10s;
+.menu__plat:nth-child(10) {
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 5s;
+  animation: menuvisible 0.5s linear forwards 5s;
 }
 
 .footermenu, .footermenurestaurant {

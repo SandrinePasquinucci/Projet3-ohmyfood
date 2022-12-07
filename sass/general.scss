@@ -31,13 +31,39 @@ li {
   list-style-type: none;
 }
 
-.coeurrose i{
-  
-  color: $violet-primaire;
 
+.coeurrose, .coeurblanc {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+}
+
+.coeurrose {
+  color: transparent;
+  opacity: 0;
+  transition: all 1500ms ease;
+ 
+}
+
+.coeurblanc:hover {
+  color: transparent;
+  opacity: 0;
+  }
+
+.coeurrose:hover {
+      opacity: 1;
+      background: linear-gradient(#9356DC, #FF79DA);
+      /* nécessaire sinon affiche un carré dégradé -- compatiblité des navigateurs */
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
 
 }
 
+.coeurresto {
+  font-size: 30px;  
+}
 .description h2{
   font-family: $shrikhand;
   text-align: center;
