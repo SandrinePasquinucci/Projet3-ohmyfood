@@ -49,7 +49,7 @@
   }
 
   &__texte {
-    width: 500px;
+    width: 450px;
     font-weight: 400;
     font-size: 24px;
     margin-bottom: 50px;
@@ -150,7 +150,9 @@ width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+    gap:3%;
     }
+
   }
   /* Desktop*/
   @media (min-width: 992px) {

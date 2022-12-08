@@ -202,7 +202,7 @@ header .retouraccueil i {
   padding-top: 20px;
 }
 .presentation__texte {
-  width: 500px;
+  width: 450px;
   font-weight: 400;
   font-size: 24px;
   margin-bottom: 50px;
@@ -287,6 +287,7 @@ header .retouraccueil i {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 3%;
   }
 }
 @media (min-width: 992px) {
@@ -401,6 +402,8 @@ header .retouraccueil i {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Tablette*/
+  /* Desktop*/
 }
 .description__titre {
   display: flex;
@@ -411,7 +414,7 @@ header .retouraccueil i {
   padding-top: 40px;
   margin-top: -48px;
   padding-left: 30px;
-  padding-right: 50px;
+  padding-right: 30px;
   width: 90%;
   font-weight: 500;
 }
@@ -419,15 +422,22 @@ header .retouraccueil i {
   width: 100%;
   top: 70px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .description__titre {
-    width: 800px;
-    margin: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 95%;
   }
   .description__image img {
-    width: 880px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .description__titre {
+    width: 840px;
+  }
+  .description__image img {
+    width: 900px;
   }
 }
 
@@ -461,10 +471,11 @@ header .retouraccueil i {
   justify-content: center;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
+  transition: width 2s, visibility 2s, transform 2s;
 }
 .menu__plat:hover .menu__focus {
-  animation: focusvisible 1s;
-  animation-fill-mode: forwards;
+  visibility: visible;
+  width: 80px;
 }
 .menu__plat:hover .menu__focus i {
   animation: focustourne 1s;
@@ -474,16 +485,6 @@ header .retouraccueil i {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-@keyframes focusvisible {
-  from {
-    width: 0;
-    visibility: hidden;
-  }
-  to {
-    width: 80px;
-    visibility: visible;
-  }
 }
 @keyframes focustourne {
   from {
@@ -538,7 +539,7 @@ header .retouraccueil i {
 
 @media (min-width: 992px) {
   .commander {
-    width: 800px;
+    width: 880px;
     margin: auto;
     padding-left: 10px;
     padding-right: 10px;
@@ -547,7 +548,7 @@ header .retouraccueil i {
     width: 350px;
   }
   .menu {
-    width: 800px;
+    width: 880px;
     margin: auto;
   }
 }
@@ -670,7 +671,7 @@ footer a {
 
 @media (min-width: 992px) {
   .footermenurestaurant {
-    width: 800px;
+    width: 880px;
     margin: auto;
     padding-left: 10px;
     padding-right: 10px;

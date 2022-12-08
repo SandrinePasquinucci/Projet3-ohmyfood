@@ -12,26 +12,43 @@
         padding-top :40px;
         margin-top : -48px;
     padding-left : 30px;
-    padding-right : 50px;
+    padding-right : 30px;
     width: 90%; 
     font-weight: 500;
     }
 
     &__image img{
-     
     width: 100%;
      top : 70px;
     }
+
+    /* Tablette*/
+  @media (min-width: 768px) {
+    &__titre{
+   
+        width: 95%;
+    
+    }
+ 
+    &__image img{
+padding-left:0;
+padding-right : 0;
+    width: 100%;
+    }
+    }
+
+  
+  /* Desktop*/
+  
     @media (min-width: 992px) {
         &__titre {
-            width: 800px;
-            margin: auto;
-            padding-left: 10px;
-            padding-right: 10px;
+            width: 840px;
+            
+          
         }
         &__image img{
 
-            width: 880px;
+            width: 900px;
             
              }
         }     
@@ -67,13 +84,15 @@
    justify-content: center;
    background-color: $aqua-tertiaire;
    border-radius: 0 15px 15px 0;
+   transition: width 2s, visibility 2s, transform 2s;
    }
    &__plat:hover {
         .menu__focus{
-            animation: focusvisible 1s ;
-            animation-fill-mode:forwards;
-        
+            visibility : visible;
+            width : 80px;
+    
         }
+   
         .menu__focus i{
             animation: focustourne 1s ;
         }
@@ -85,16 +104,6 @@
         }
     }
 
-    @keyframes focusvisible {
-        from {
-                width: 0;
-                visibility: hidden;
-        }
-        to {
-                width: 80px;
-                visibility: visible;
-        }  
-    }
     @keyframes focustourne {
         from {
             transform: rotate(0deg);
@@ -159,7 +168,7 @@
 
  @media (min-width: 992px) {
     .commander {
-        width: 800px;
+        width: 880px;
         margin: auto;
         padding-left: 10px;
     padding-right: 10px;
@@ -169,7 +178,7 @@
         width: 350px;
      }
      .menu {
-        width: 800px;
+        width: 880px;
         margin: auto;
     }
 }
@@ -247,4 +256,5 @@ from {
     -webkit-animation: menuvisible 0.5s linear forwards 5s;
     animation: menuvisible 0.5s linear forwards 5s;
 }
+
   
