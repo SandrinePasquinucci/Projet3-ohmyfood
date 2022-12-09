@@ -481,7 +481,7 @@ header .retouraccueil i {
   animation: focustourne 1s;
 }
 .menu__plat:hover .menu__detail p, .menu__plat:hover .titre_plat {
-  width: 280px;
+  width: 60%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -537,15 +537,13 @@ header .retouraccueil i {
   background-color: #e2e2e2;
 }
 
+/* Desktop*/
 @media (min-width: 992px) {
   .commander {
     width: 880px;
     margin: auto;
     padding-left: 10px;
     padding-right: 10px;
-  }
-  .titre_plat {
-    width: 350px;
   }
   .menu {
     width: 880px;

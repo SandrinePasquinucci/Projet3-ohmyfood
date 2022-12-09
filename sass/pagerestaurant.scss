@@ -97,7 +97,7 @@ padding-right : 0;
             animation: focustourne 1s ;
         }
         .menu__detail p, .titre_plat{
-            width: 280px;
+            width: 60%;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
@@ -155,8 +155,7 @@ padding-right : 0;
          }
 }
 
-
-   
+  
 .commander{
     display : flex;
     flex-direction: column;
@@ -166,6 +165,8 @@ padding-right : 0;
  
  }
 
+  
+  /* Desktop*/
  @media (min-width: 992px) {
     .commander {
         width: 880px;
@@ -173,14 +174,12 @@ padding-right : 0;
         padding-left: 10px;
     padding-right: 10px;
     }
-    .titre_plat{
-        
-        width: 350px;
-     }
+ 
      .menu {
         width: 880px;
         margin: auto;
     }
+
 }
 
 
