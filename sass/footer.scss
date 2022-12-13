@@ -1,47 +1,44 @@
-.footermenu, .footermenurestaurant {
-    display: flex;
-    flex-direction: column;
-    padding-left : 20px;
-    padding-right: 20px;
-    background-color: $gris-sombre;
-    color : $txt-blanc;
+.footermenu,
+.footermenurestaurant {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $gris-sombre;
+  color: $txt-blanc;
+}
 
-  }
-
-  .footermenu p , .footermenurestaurant p{
-    font-family: $shrikhand;
-    font-weight: 500;
-    margin-top : 20px;
-    font-size:26px;
-
-  }
+.footermenu p,
+.footermenurestaurant p {
+  font-family: $shrikhand;
+  font-weight: 500;
+  margin-top: 20px;
+  font-size: 26px;
+}
 
 footer ul {
-    list-style-type: none;
-    padding-top: 20px;
-    margin-bottom: 20px;
-   
-  }
-  footer li {
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 12px;
-  
-  }
-  footer a {
-    color : $txt-blanc;
-    text-decoration: none;
-    
-  }
+  list-style-type: none;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+footer li {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+footer a {
+  color: $txt-blanc;
+  text-decoration: none;
+}
 
-  .iconefooter{
-    width: 30px;
-  }
-  @media (min-width: 992px) {
-    .footermenurestaurant{
-        width: 880px;
-        margin: auto;
-        padding-left: 10px;
+.iconefooter {
+  width: 30px;
+}
+@media (min-width: 992px) {
+  .footermenurestaurant {
+    width: 880px;
+    margin: auto;
+    padding-left: 10px;
     padding-right: 10px;
-    }
-    }
+  }
+}

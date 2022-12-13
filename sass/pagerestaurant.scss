@@ -1,258 +1,240 @@
 /*setion description : image + titre*/
-.description{
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__titre {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    &__titre{
-        display:flex;
-        justify-content: space-between;
-        align-items:center;
-        border-radius: 40px 40px 0px 0px;
-        background-color: $gris-clair;
-        padding-top :40px;
-        margin-top : -48px;
-    padding-left : 30px;
-    padding-right : 30px;
-    width: 90%; 
+    border-radius: 40px 40px 0px 0px;
+    background-color: $gris-clair;
+    padding-top: 40px;
+    margin-top: -48px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 90%;
     font-weight: 500;
-    }
+  }
 
-    &__image img{
+  &__image img {
     width: 100%;
-     top : 70px;
-    }
+    top: 70px;
+  }
 
-    /* Tablette*/
+  /* Tablette*/
   @media (min-width: 768px) {
-    &__titre{
-   
-        width: 95%;
-    
-    }
- 
-    &__image img{
-padding-left:0;
-padding-right : 0;
-    width: 100%;
-    }
+    &__titre {
+      width: 95%;
     }
 
-  
+    &__image img {
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+
   /* Desktop*/
-  
-    @media (min-width: 992px) {
-        &__titre {
-            width: 840px;
-            
-          
-        }
-        &__image img{
 
-            width: 900px;
-            
-             }
-        }     
+  @media (min-width: 992px) {
+    &__titre {
+      width: 840px;
+    }
+    &__image img {
+      width: 900px;
+    }
+  }
 }
 /*setion menu : carte du restaurant*/
-.menu__detail p, .titre_plat{
-    width: 200px;
-   
+.menu__detail p,
+.titre_plat {
+  width: 200px;
 }
 .menu {
-    background-color:$gris-clair;
+  background-color: $gris-clair;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  &__plat {
+    display: flex;
+    box-shadow: 1px 1px 5px grey;
+    border-radius: 15px;
+    background-color: #ffffff;
+    margin: 15px 0px;
     padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    &__plat {
-        display:flex;
-        box-shadow: 1px 1px  5px grey;
-        border-radius: 15px;
-        background-color: #ffffff;
-        margin:15px 0px;
-        padding-left:10px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    
-    }
-   &__focus {
-    width : 0;
-   visibility: hidden;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background-color: $aqua-tertiaire;
-   border-radius: 0 15px 15px 0;
-   transition: width 2s, visibility 2s, transform 2s;
-   }
-   &__plat:hover {
-        .menu__focus{
-            visibility : visible;
-            width : 80px;
-    
-        }
-   
-        .menu__focus i{
-            animation: focustourne 1s ;
-        }
-        .menu__detail p, .titre_plat{
-            width: 60%;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-    }
-
-    @keyframes focustourne {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }  
-    }
-
-    &__titre{
-        width: 100%;
-    }
-
-    &__detail{
-        display:flex;
-        justify-content: space-between;
-        padding-top: 5px;
-    }
-
-    &__detail p {
-        font-weight: 400;
-        font-size: 18px;
-    }
-
-    &__detail h3 {
-        padding-right: 10px;
-        padding-bottom: 10px;
-        font-size: 20px;
-    }
-  
-
-    &__barre{
-        background-color: $aqua-tertiaire;
-        height: 2px;
-        width: 55px;
-        margin-top: 5px;
-    }
-    h2{
-        
-        padding-top:50px;
-           font-size: 22px;
-           font-weight: 300;
-           color : $gris-sombre
-           }
-           .titre_plat{
-            padding-top: 10px;
-            font-size: 20px;
-            width: 250px;
-         }
-}
-
-  
-.commander{
-    display : flex;
-    flex-direction: column;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  &__focus {
+    width: 0;
+    visibility: hidden;
+    display: flex;
     align-items: center;
-    padding-top: 40px;
-    background-color: $gris-clair;
- 
- }
-
-  
-  /* Desktop*/
- @media (min-width: 992px) {
-    .commander {
-        width: 880px;
-        margin: auto;
-        padding-left: 10px;
-    padding-right: 10px;
-    }
- 
-     .menu {
-        width: 880px;
-        margin: auto;
+    justify-content: center;
+    background-color: $aqua-tertiaire;
+    border-radius: 0 15px 15px 0;
+    transition: width 2s, visibility 2s, transform 2s;
+  }
+  &__plat:hover {
+    .menu__focus {
+      visibility: visible;
+      width: 80px;
     }
 
-}
+    .menu__focus i {
+      animation: focustourne 1s;
+    }
+    .menu__detail p,
+    .titre_plat {
+      width: 60%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
 
-
-
-@keyframes menuvisible {
+  @keyframes focustourne {
     from {
-        transform: translateY(200px);
-        opacity:0;
+      transform: rotate(0deg);
     }
     to {
-        transform: translateY(0px);
-        opacity:1;
-    }  
+      transform: rotate(360deg);
+    }
+  }
+
+  &__titre {
+    width: 100%;
+  }
+
+  &__detail {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+  }
+
+  &__detail p {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &__detail h3 {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+
+  &__barre {
+    background-color: $aqua-tertiaire;
+    height: 2px;
+    width: 55px;
+    margin-top: 5px;
+  }
+  h2 {
+    padding-top: 50px;
+    font-size: 22px;
+    font-weight: 300;
+    color: $gris-sombre;
+  }
+  .titre_plat {
+    padding-top: 10px;
+    font-size: 20px;
+    width: 250px;
+  }
+}
+
+.commander {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  background-color: $gris-clair;
+}
+
+/* Desktop*/
+@media (min-width: 992px) {
+  .commander {
+    width: 880px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .menu {
+    width: 880px;
+    margin: auto;
+  }
+}
+
+@keyframes menuvisible {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes menuvisible {
-from {
-        transform: translateY(200px);
-        opacity:0;
-    }
-    to {
-        transform: translateY(0px);
-        opacity:1;
-    }  
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
- .menu__plat:nth-child(1) {
-    opacity:0;
-    -webkit-animation: menuvisible 0.5s linear forwards 0.5s;
-    animation: menuvisible 0.5s linear forwards 0.5s;
+.menu__plat:nth-child(1) {
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 0.5s;
+  animation: menuvisible 0.5s linear forwards 0.5s;
 }
 .menu__plat:nth-child(2) {
-    opacity:0;
-    -webkit-animation: menuvisible 0.5s linear forwards 1s;
-    animation: menuvisible 0.5s linear forwards 1s;
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 1s;
+  animation: menuvisible 0.5s linear forwards 1s;
 }
 .menu__plat:nth-child(3) {
-    opacity:0;
-    -webkit-animation: menuvisible 0.5s linear forwards 1.5s;
-    animation: menuvisible 0.5s linear forwards 1.5s;
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 1.5s;
+  animation: menuvisible 0.5s linear forwards 1.5s;
 }
 .menu__plat:nth-child(4) {
-    opacity:0;
-    -webkit-animation: menuvisible 0.5s linear forwards 2s;
-    animation: menuvisible 0.5s linear forwards 2s;
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 2s;
+  animation: menuvisible 0.5s linear forwards 2s;
 }
 .menu__plat:nth-child(5) {
-    opacity:0;
-    -webkit-animation: menuvisible 0.5s linear forwards 2.5s;
-    animation: menuvisible 0.5s linear forwards 2.5s;
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 2.5s;
+  animation: menuvisible 0.5s linear forwards 2.5s;
 }
 .menu__plat:nth-child(6) {
-    opacity:0;
-    -webkit-animation: menuvisible 0.5s linear forwards 3s;
-    animation: menuvisible 0.5s linear forwards 3s;
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 3s;
+  animation: menuvisible 0.5s linear forwards 3s;
 }
 .menu__plat:nth-child(7) {
-    opacity:0;
-    -webkit-animation: menuvisible 0.5s linear forwards 3.5s;
-    animation: menuvisible 0.5s linear forwards 3.5s;
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 3.5s;
+  animation: menuvisible 0.5s linear forwards 3.5s;
 }
 .menu__plat:nth-child(8) {
-    opacity:0;
-    -webkit-animation: menuvisible 0.5s linear forwards 4s;
-    animation: menuvisible 0.5s linear forwards 4s;
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 4s;
+  animation: menuvisible 0.5s linear forwards 4s;
 }
 .menu__plat:nth-child(9) {
-    opacity:0;
-    -webkit-animation: menuvisible 0.5s linear forwards 4.5s;
-    animation: menuvisible 0.5s linear forwards 4.5s;
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 4.5s;
+  animation: menuvisible 0.5s linear forwards 4.5s;
 }
 .menu__plat:nth-child(10) {
-    opacity:0;
-    -webkit-animation: menuvisible 0.5s linear forwards 5s;
-    animation: menuvisible 0.5s linear forwards 5s;
+  opacity: 0;
+  -webkit-animation: menuvisible 0.5s linear forwards 5s;
+  animation: menuvisible 0.5s linear forwards 5s;
 }
-
-  

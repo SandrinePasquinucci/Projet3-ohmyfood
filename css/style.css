@@ -443,7 +443,8 @@ header .retouraccueil i {
 }
 
 /*setion menu : carte du restaurant*/
-.menu__detail p, .titre_plat {
+.menu__detail p,
+.titre_plat {
   width: 200px;
 }
 
@@ -481,7 +482,8 @@ header .retouraccueil i {
 .menu__plat:hover .menu__focus i {
   animation: focustourne 1s;
 }
-.menu__plat:hover .menu__detail p, .menu__plat:hover .titre_plat {
+.menu__plat:hover .menu__detail p,
+.menu__plat:hover .titre_plat {
   width: 60%;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -631,7 +633,8 @@ header .retouraccueil i {
   animation: menuvisible 0.5s linear forwards 5s;
 }
 
-.footermenu, .footermenurestaurant {
+.footermenu,
+.footermenurestaurant {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
@@ -640,7 +643,8 @@ header .retouraccueil i {
   color: #ffffff;
 }
 
-.footermenu p, .footermenurestaurant p {
+.footermenu p,
+.footermenurestaurant p {
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
   margin-top: 20px;
