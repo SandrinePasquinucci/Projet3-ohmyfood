@@ -47,10 +47,7 @@
   }
 }
 /*setion menu : carte du restaurant*/
-.menu__detail p,
-.titre_plat {
-  width: 200px;
-}
+
 .menu {
   background-color: $gris-clair;
   padding-left: 10px;
@@ -76,6 +73,9 @@
     background-color: $aqua-tertiaire;
     border-radius: 0 15px 15px 0;
     transition: width 2s, visibility 2s, transform 2s;
+    .menu__focus i {
+      transition: width 2s, visibility 2s, transform 2s;
+    }
   }
   &__plat:hover {
     .menu__focus {
@@ -88,12 +88,30 @@
     }
     .menu__detail p,
     .titre_plat {
-      width: 60%;
+      width: 50%;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
     }
   }
+  &__plat:active {
+    .menu__focus {
+      visibility: visible;
+      width: 80px;
+    }
+
+    .menu__focus i {
+      animation: focustourne 1s;
+    }
+    .menu__detail p,
+    .titre_plat {
+      width: 50%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
 
   @keyframes focustourne {
     from {
@@ -115,8 +133,9 @@
   }
 
   &__detail p {
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 16px;
+    width: 300px;
   }
 
   &__detail h3 {
@@ -139,8 +158,9 @@
   }
   .titre_plat {
     padding-top: 10px;
-    font-size: 20px;
-    width: 250px;
+    font-size: 18px;
+    width: 300px;
+    font-weight: 500;
   }
 }
 

@@ -42,16 +42,16 @@
   background-color: $gris-clair;
 
   &__titre {
-    width: 350px;
+    width: 300px;
     font-weight: 900;
 
     padding-top: 20px;
   }
 
   &__texte {
-    width: 450px;
+    width: 350px;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 50px;
     padding-top: 30px;
     color: #888888;
@@ -123,16 +123,27 @@
     padding-left: 40px;
     padding-right: 40px;
     width: 100%;
-    font-size: 22px;
+    font-size: 18px;
     gap: 23px;
+    text-decoration: none;
+    color: black;
   }
   .fonctionnement__icones i {
     color: #888888;
-    font-size: 26px;
+    font-size: 22px;
   }
 
   &__menu__detailtexte:hover {
     background-color: #e4ccfa;
+ 
+    .fonctionnement__icones i {
+      color: $violet-primaire;
+    }
+  }
+  &__menu__detailtexte:active {
+    
+    background-color: #e4ccfa;
+ 
     .fonctionnement__icones i {
       color: $violet-primaire;
     }
@@ -204,7 +215,7 @@
 
   &__liste__carddetail p {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 18px;
     margin-top: 10px;
   }
   .coeurrose i {
@@ -227,7 +238,14 @@
       animation: coeurrosechangement 3s linear 1;
     }
   }
-
+  .coeur:active {
+    .coeurblanc i {
+      animation: coeurblancchangement 3s linear 1;
+    }
+    .coeurrose i {
+      animation: coeurrosechangement 3s linear 1;
+    }
+  }
   @keyframes coeurblancchangement {
     from {
       opacity: 1;

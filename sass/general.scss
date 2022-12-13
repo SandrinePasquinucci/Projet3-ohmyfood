@@ -3,17 +3,17 @@ body {
     /* Police et couleur d'écriture, couleur de fond, suppression ndes marges auto, cadrage */
     font-family: $roboto;
     color: #000000;
-    font-size: 22px;
+    font-size: 18px;
     background-color: #ffffff;
     margin: auto;
     padding: 0;
-    font-weight: 700;
+    font-weight: 500;
     max-width: 1400px;
 
   }
   .h2{
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
   }
 
  /* Supprimer les marges auto */
@@ -84,10 +84,12 @@ li {
 box-shadow: 1px 1px  5px $gris-sombre ;
 transition: opacity 1s;
 transition: box-shadow 1s;
+
 }
-.bouton:hover {
+.bouton:hover, .bouton:active, .bouton:focus {
   opacity : 0.8 ;
   box-shadow: 1px 1px  15px $gris-sombre ;
+  outline: none !important;
 }
 
 .menu__focus i {

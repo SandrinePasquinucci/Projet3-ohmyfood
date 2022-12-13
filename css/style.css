@@ -4,17 +4,17 @@ body {
   /* Police et couleur d'écriture, couleur de fond, suppression ndes marges auto, cadrage */
   font-family: "Roboto", sans-serif;
   color: #000000;
-  font-size: 22px;
+  font-size: 18px;
   background-color: #ffffff;
   margin: auto;
   padding: 0;
-  font-weight: 700;
+  font-weight: 500;
   max-width: 1400px;
 }
 
 .h2 {
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Supprimer les marges auto */
@@ -86,9 +86,10 @@ li {
   transition: box-shadow 1s;
 }
 
-.bouton:hover {
+.bouton:hover, .bouton:active, .bouton:focus {
   opacity: 0.8;
   box-shadow: 1px 1px 15px #353535;
+  outline: none !important;
 }
 
 .menu__focus i {
@@ -198,14 +199,14 @@ header .retouraccueil i {
   /* Desktop*/
 }
 .presentation__titre {
-  width: 350px;
+  width: 300px;
   font-weight: 900;
   padding-top: 20px;
 }
 .presentation__texte {
-  width: 450px;
+  width: 350px;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 50px;
   padding-top: 30px;
   color: #888888;
@@ -270,17 +271,25 @@ header .retouraccueil i {
   padding-left: 40px;
   padding-right: 40px;
   width: 100%;
-  font-size: 22px;
+  font-size: 18px;
   gap: 23px;
+  text-decoration: none;
+  color: black;
 }
 .fonctionnement .fonctionnement__icones i {
   color: #888888;
-  font-size: 26px;
+  font-size: 22px;
 }
 .fonctionnement__menu__detailtexte:hover {
   background-color: #e4ccfa;
 }
 .fonctionnement__menu__detailtexte:hover .fonctionnement__icones i {
+  color: #9356DC;
+}
+.fonctionnement__menu__detailtexte:active {
+  background-color: #e4ccfa;
+}
+.fonctionnement__menu__detailtexte:active .fonctionnement__icones i {
   color: #9356DC;
 }
 @media (min-width: 768px) {
@@ -348,7 +357,7 @@ header .retouraccueil i {
 }
 .restaurants__liste__carddetail p {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
   margin-top: 10px;
 }
 .restaurants .coeurrose i {
@@ -366,6 +375,12 @@ header .retouraccueil i {
   animation: coeurblancchangement 3s linear 1;
 }
 .restaurants .coeur:hover .coeurrose i {
+  animation: coeurrosechangement 3s linear 1;
+}
+.restaurants .coeur:active .coeurblanc i {
+  animation: coeurblancchangement 3s linear 1;
+}
+.restaurants .coeur:active .coeurrose i {
   animation: coeurrosechangement 3s linear 1;
 }
 @keyframes coeurblancchangement {
@@ -443,11 +458,6 @@ header .retouraccueil i {
 }
 
 /*setion menu : carte du restaurant*/
-.menu__detail p,
-.titre_plat {
-  width: 200px;
-}
-
 .menu {
   background-color: #e2e2e2;
   padding-left: 10px;
@@ -475,6 +485,9 @@ header .retouraccueil i {
   border-radius: 0 15px 15px 0;
   transition: width 2s, visibility 2s, transform 2s;
 }
+.menu__focus .menu__focus i {
+  transition: width 2s, visibility 2s, transform 2s;
+}
 .menu__plat:hover .menu__focus {
   visibility: visible;
   width: 80px;
@@ -484,7 +497,21 @@ header .retouraccueil i {
 }
 .menu__plat:hover .menu__detail p,
 .menu__plat:hover .titre_plat {
-  width: 60%;
+  width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu__plat:active .menu__focus {
+  visibility: visible;
+  width: 80px;
+}
+.menu__plat:active .menu__focus i {
+  animation: focustourne 1s;
+}
+.menu__plat:active .menu__detail p,
+.menu__plat:active .titre_plat {
+  width: 50%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -506,8 +533,9 @@ header .retouraccueil i {
   padding-top: 5px;
 }
 .menu__detail p {
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 16px;
+  width: 300px;
 }
 .menu__detail h3 {
   padding-right: 10px;
@@ -528,8 +556,9 @@ header .retouraccueil i {
 }
 .menu .titre_plat {
   padding-top: 10px;
-  font-size: 20px;
-  width: 250px;
+  font-size: 18px;
+  width: 300px;
+  font-weight: 500;
 }
 
 .commander {
