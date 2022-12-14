@@ -493,8 +493,7 @@ header .retouraccueil i {
   transition: width 2s, visibility 2s, transform 2s;
 }
 .menu__plat:hover .menu__focus {
-  visibility: visible;
-  width: 80px;
+  animation: focusactif 1s;
 }
 .menu__plat:hover .menu__focus i {
   animation: focustourne 1s;
@@ -507,18 +506,27 @@ header .retouraccueil i {
   overflow: hidden;
 }
 .menu__plat:active .menu__focus {
-  visibility: visible;
-  width: 80px;
+  animation: focusactif 1s;
 }
 .menu__plat:active .menu__focus i {
   animation: focustourne 1s;
 }
 .menu__plat:active .menu__detail p,
 .menu__plat:active .titre_plat {
-  width: 50%;
+  width: 40%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+@keyframes focusactif {
+  from {
+    width: 0;
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+    width: 80px;
+  }
 }
 @keyframes focustourne {
   from {
