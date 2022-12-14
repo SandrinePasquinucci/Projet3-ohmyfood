@@ -46,12 +46,12 @@ li {
  
 }
 
-.coeurblanc:hover {
+.coeurblanc:hover, .coeurblanc:active {
   color: transparent;
   opacity: 0;
   }
 
-.coeurrose:hover {
+.coeurrose:hover, .coeurrose:active {
       opacity: 1;
       background: linear-gradient(#9356DC, #FF79DA);
       /* nécessaire sinon affiche un carré dégradé -- compatiblité des navigateurs */

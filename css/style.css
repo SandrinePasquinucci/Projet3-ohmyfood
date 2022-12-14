@@ -46,12 +46,12 @@ li {
   transition: all 1500ms ease;
 }
 
-.coeurblanc:hover {
+.coeurblanc:hover, .coeurblanc:active {
   color: transparent;
   opacity: 0;
 }
 
-.coeurrose:hover {
+.coeurrose:hover, .coeurrose:active {
   opacity: 1;
   background: linear-gradient(#9356DC, #FF79DA);
   /* nécessaire sinon affiche un carré dégradé -- compatiblité des navigateurs */
@@ -287,9 +287,11 @@ header .retouraccueil i {
   color: #9356DC;
 }
 .fonctionnement__menu__detailtexte:active {
+  -webkit-background-color: #e4ccfa;
   background-color: #e4ccfa;
 }
 .fonctionnement__menu__detailtexte:active .fonctionnement__icones i {
+  -webkit-color: #9356DC;
   color: #9356DC;
 }
 @media (min-width: 768px) {
@@ -372,15 +374,19 @@ header .retouraccueil i {
   right: 10px;
 }
 .restaurants .coeur:hover .coeurblanc i {
+  -webkit-animation: coeurblancchangement 3s linear 1;
   animation: coeurblancchangement 3s linear 1;
 }
 .restaurants .coeur:hover .coeurrose i {
+  -webkit-animation: coeurrosechangement 3s linear 1;
   animation: coeurrosechangement 3s linear 1;
 }
 .restaurants .coeur:active .coeurblanc i {
+  -webkit-animation: coeurblancchangement 3s linear 1;
   animation: coeurblancchangement 3s linear 1;
 }
 .restaurants .coeur:active .coeurrose i {
+  -webkit-animation: coeurrosechangement 3s linear 1;
   animation: coeurrosechangement 3s linear 1;
 }
 @keyframes coeurblancchangement {
@@ -483,9 +489,7 @@ header .retouraccueil i {
   justify-content: center;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
-  transition: width 2s, visibility 2s, transform 2s;
-}
-.menu__focus .menu__focus i {
+  -webkit-transition: width 2s, visibility 2s, transform 2s;
   transition: width 2s, visibility 2s, transform 2s;
 }
 .menu__plat:hover .menu__focus {

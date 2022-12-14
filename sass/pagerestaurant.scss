@@ -72,10 +72,9 @@
     justify-content: center;
     background-color: $aqua-tertiaire;
     border-radius: 0 15px 15px 0;
+    -webkit-transition:width 2s, visibility 2s, transform 2s;
     transition: width 2s, visibility 2s, transform 2s;
-    .menu__focus i {
-      transition: width 2s, visibility 2s, transform 2s;
-    }
+ 
   }
   &__plat:hover {
     .menu__focus {

@@ -141,10 +141,11 @@
     }
   }
   &__menu__detailtexte:active {
-    
+    -webkit-background-color: #e4ccfa;
     background-color: #e4ccfa;
  
     .fonctionnement__icones i {
+      -webkit-color: $violet-primaire;
       color: $violet-primaire;
     }
   }
@@ -232,17 +233,21 @@
 
   .coeur:hover {
     .coeurblanc i {
+      -webkit-animation: coeurblancchangement 3s linear 1;
       animation: coeurblancchangement 3s linear 1;
     }
     .coeurrose i {
+      -webkit-animation: coeurrosechangement 3s linear 1;
       animation: coeurrosechangement 3s linear 1;
     }
   }
   .coeur:active {
     .coeurblanc i {
+      -webkit-animation: coeurblancchangement 3s linear 1;
       animation: coeurblancchangement 3s linear 1;
     }
     .coeurrose i {
+      -webkit-animation: coeurrosechangement 3s linear 1;
       animation: coeurrosechangement 3s linear 1;
     }
   }
